@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project provides a RESTful API built with **Golang 1.20+** for managing user loyalty points. It enables user registration and authentication, tracks transactions that earn points, supports points redemption with mandatory reasons, and offers paginated, filtered views of points history. Security is ensured through JWT-based authentication using access and refresh tokens. Data persistence is handled with **PostgreSQL** or **MySQL** via the **GORM** ORM.
+This project provides a RESTful API built with **Golang 1.20+** for managing user loyalty points. It enables user registration and authentication, tracks transactions that earn points, supports points redemption with mandatory reasons, and offers paginated, filtered views of points history. Security is ensured through JWT-based authentication using access and refresh tokens. Data persistence is handled with **MySQL** via the **GORM** ORM.
 
 ---
 
