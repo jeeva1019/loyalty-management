@@ -132,8 +132,6 @@ Get paginated points history filtered by:
 | end             | Page size (default: 20)                    |
 | type            | Filter by points record type (earn/redeem) |
 
-Got it! Here's how you can update the README to mention that the Postman collection is in the **`document`** folder:
-
 ---
 
 ## Postman Collection
