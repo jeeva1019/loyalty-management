@@ -74,7 +74,7 @@ This project provides a RESTful API built with **Golang 1.20+** for managing use
 ### 1. Clone the repository
 
 ```bash
-git https://github.com/jeeva1019/loyalty-management.git
+git clone https://github.com/jeeva1019/loyalty-management.git
 cd loyalty-management
 ```
 
