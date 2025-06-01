@@ -1,0 +1,6 @@
+# Database Configration
+user = "root"
+password = "$sparrowJeeva65"
+db = "loyality_point_system"
+host = "127.0.0.1:3306"
+

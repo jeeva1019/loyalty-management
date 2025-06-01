@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "2de45c7d-7d44-48f3-8372-bc9a0ea2b1d1",
+		"name": "LoyalityPoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41482357"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nancy@gmail.com\",\r\n    \"password\": \"Nancy@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/signup",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SignUp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nancy@gmail.com\",\r\n    \"password\": \"Nancy@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/signup",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, credentials"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:36:25 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"msg\": \"User Created Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alice@gmail.com\",\r\n    \"password\": \"Alice@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LogIn",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"alice@gmail.com\",\r\n    \"password\": \"Alice@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, credentials"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsImV4cCI6MTc0ODc4ODYwNCwidHlwZSI6ImFjY2VzcyJ9.B5K8NtK-8x-CM2JaJhp_y9g0L8QCKmL1BlDB3c-PkUg"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDkzODk4MDQsInR5cGUiOiJyZWZyZXNoIiwidXNlcklEIjoiMiJ9.1JHLNvjrCpIz1n5PHAr_RenjbtbEi-x5HW21lLWU7q8; Path=/; Expires=Sun, 08 Jun 2025 13:36:44 GMT; HttpOnly; Secure; SameSite=Lax"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:36:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"msg\": \"Login successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PointBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/points/balance?page=1&page_size=20",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"points",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PointBalance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/points/balance?page=1&page_size=20",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"points",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-New-Access-Token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsImV4cCI6MTc0ODc4ODYxMiwidHlwZSI6ImFjY2VzcyJ9.AsknY58LjY2r6YPMfvVPqbbowVL93ysVKrVFTg6flM8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:36:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "642"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"result\": {\n        \"page\": 1,\n        \"page_size\": 20,\n        \"points_balance\": 1478,\n        \"points_history\": [\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 99,\n                \"type\": \"earn\",\n                \"reason\": \"Books\",\n                \"category\": \"Books\",\n                \"created_at\": \"2025-06-01T13:35:57.272Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 494,\n                \"type\": \"earn\",\n                \"reason\": \"Furniture\",\n                \"category\": \"Furniture\",\n                \"created_at\": \"2025-06-01T13:35:50.643Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 160,\n                \"type\": \"earn\",\n                \"reason\": \"Groceries\",\n                \"category\": \"Groceries\",\n                \"created_at\": \"2025-06-01T13:35:44.311Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 725,\n                \"type\": \"earn\",\n                \"reason\": \"Electronics\",\n                \"category\": \"Electronics\",\n                \"created_at\": \"2025-06-01T13:35:38.375Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "PointsHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/points/history?start_date=2024-06-01&end_date=2025-06-02&start=1&end=20&txtype=earn",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"points",
+						"history"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-06-01"
+						},
+						{
+							"key": "end_date",
+							"value": "2025-06-02"
+						},
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "end",
+							"value": "20"
+						},
+						{
+							"key": "txtype",
+							"value": "earn"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PointsHistory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/points/history?start_date=2024-06-01&end_date=2025-06-02&start=1&end=20&txtype=earn",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"points",
+								"history"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2024-06-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-06-02"
+								},
+								{
+									"key": "start",
+									"value": "1"
+								},
+								{
+									"key": "end",
+									"value": "20"
+								},
+								{
+									"key": "txtype",
+									"value": "earn"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, credentials"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-New-Access-Token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsImV4cCI6MTc0ODc4ODYzMCwidHlwZSI6ImFjY2VzcyJ9.mlVhSm4WhTPlUtEkzUjGYW9ZwhOlK74luW6glS_I8Y0"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:37:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "638"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"result\": {\n        \"page\": 1,\n        \"page_size\": 20,\n        \"points_history\": [\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 99,\n                \"type\": \"earn\",\n                \"reason\": \"Books\",\n                \"category\": \"Books\",\n                \"created_at\": \"2025-06-01T13:35:57.272Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 494,\n                \"type\": \"earn\",\n                \"reason\": \"Furniture\",\n                \"category\": \"Furniture\",\n                \"created_at\": \"2025-06-01T13:35:50.643Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 160,\n                \"type\": \"earn\",\n                \"reason\": \"Groceries\",\n                \"category\": \"Groceries\",\n                \"created_at\": \"2025-06-01T13:35:44.311Z\"\n            },\n            {\n                \"email\": \"alice@gmail.com\",\n                \"points\": 725,\n                \"type\": \"earn\",\n                \"reason\": \"Electronics\",\n                \"category\": \"Electronics\",\n                \"created_at\": \"2025-06-01T13:35:38.375Z\"\n            }\n        ],\n        \"total_records\": 4\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_id\": \"TXN4490231\",\r\n    \"transaction_amount\": 199.99,\r\n    \"category\": \"Books\",\r\n    \"transaction_date\": \"2025-05-27T13:00:00Z\",\r\n    \"product_code\": \"BOOK-7701\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/transaction",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"transaction"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transaction",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"transaction_id\": \"TXN4490231\",\r\n    \"transaction_amount\": 199.99,\r\n    \"category\": \"Books\",\r\n    \"transaction_date\": \"2025-05-27T13:00:00Z\",\r\n    \"product_code\": \"BOOK-7701\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/transaction",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"transaction"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, credentials"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-New-Access-Token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsImV4cCI6MTc0ODc4ODU1NywidHlwZSI6ImFjY2VzcyJ9.L1pK315jzX8D_gMu5gxehRlydsYalqCa2M0T0m_aO14"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:35:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"msg\": \"transaction recorded\",\n    \"result\": {\n        \"points_earned\": 99\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "RedeemPoints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"points_to_redeem\": 400,\r\n  \"reason\": \"Discount on next purchase\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/points/redeem",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"points",
+						"redeem"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "RedeemPoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"points_to_redeem\": 400,\r\n  \"reason\": \"Discount on next purchase\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/points/redeem",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"points",
+								"redeem"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, credentials"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, PUT, DELETE, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-New-Access-Token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsaWNlQGdtYWlsLmNvbSIsImV4cCI6MTc0ODc4ODY1OCwidHlwZSI6ImFjY2VzcyJ9.5WBZC3bnYvS0VnS_AvVRyBRvIo5I6U2dgBNC6Og0I-w"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Jun 2025 13:37:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"S\",\n    \"msg\": \"points redeemed\",\n    \"result\": {\n        \"remaining_balance\": 1078\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:29095",
+			"type": "string"
+		}
+	]
+}

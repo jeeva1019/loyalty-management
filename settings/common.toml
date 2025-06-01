@@ -1,0 +1,8 @@
+# port number 
+port = "29095"
+
+# secret key 
+secret = "WzU6_A3-Lbt6R3QyP52fz4WJP1gTXGeq9UJzC4nUJe96Jg1KoA_kcvvTqT9O6aKm8Jdt4Bjw6VcoqilN1LxjBQ=="
+
+# interval hour
+hour = "24"
