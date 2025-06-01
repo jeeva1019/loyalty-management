@@ -62,9 +62,9 @@ This project provides a RESTful API built with **Golang 1.20+** for managing use
 * **Golang 1.20+**
 * **Gorilla Mux** for HTTP routing
 * **GORM** as the ORM
-* **PostgreSQL / MySQL** for the database
+* **MySQL** for the database
 * **JWT** for authentication
-* **TOML / Environment configs** for configuration
+* **TOML** for configuration
 * Custom logging utilities
 
 ---
@@ -86,7 +86,7 @@ go mod tidy
 
 ### 3. Prepare your database
 
-Create a MySQL or PostgreSQL database named `loyalty_point_system` (or as configured in `dbconfig.toml`).
+Create a MySQL database named `loyalty_point_system` and configured in `dbconfig.toml`
 
 ### 4. Run the API server
 
